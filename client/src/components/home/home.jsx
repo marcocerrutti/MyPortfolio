@@ -6,6 +6,9 @@ import MyResume from '../../image/uchenna resumeAnd.pdf';
 import { BsFillMoonStarsFill,BsFillSunFill } from 'react-icons/bs';
 import Fade from 'react-reveal/Fade';
 
+import { Link } from 'react-scroll';
+
+
 
 
 
@@ -46,11 +49,21 @@ const Home = ({theme,changeTheme}) => {
 
 
                 <Fade bottom>
-                <div className='button-for-action'>
-                    <div className='hire-me-button'>
-                        Hire Me
+                    <div className='button-for-action'>
+                    <Link to="contact"
+                            spy={true}
+                            smooth={true}
+                            duration={100}
+                            offset={-100}
+                            
+                        >
+                        <div className='hire-me-button'>
+                            
+                       
+                                Hire Me
+                        
                     </div>
-
+                    </Link>
                     <div className='get-resume-button'>
                         <a href={MyResume} download="uche_cv.pdf">
                         Get Resume
